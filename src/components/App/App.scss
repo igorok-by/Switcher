@@ -1,0 +1,12 @@
+// @import "../../styles/variables";
+
+.app {
+  margin: rem(30) 0;
+}
+
+.app__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
