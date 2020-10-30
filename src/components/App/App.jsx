@@ -5,27 +5,25 @@ import { FRUITS, DEFAULT_ID, DEFAULT_MESSAGE } from '../../data'
 
 const App = () => {
   const [fruitId, setFruitId] = useState(DEFAULT_ID)
+  const [isMessageShown, setIsMessageShown] = useState(true)
 
-  const fruitName =
-    fruitId === DEFAULT_ID
-      ? DEFAULT_MESSAGE
-      : FRUITS.find((fruit) => fruit.id === fruitId).name
+  const fruitName = isMessageShown
+    ? DEFAULT_MESSAGE
+    : FRUITS.find((fruit) => fruit.id === fruitId).name
 
   const handleValueChange = ({ target: { value } }) => {
-    // console.log(value)
+    if (value && !Number.isNaN(+value.trim())) {
+      const inputNumb = Math.abs(+value.trim())
+      const fruitsQuantity = FRUITS.length
 
-    if (value) {
-      const inputNumb = +value.trim()
-
-      if (!Number.isNaN(inputNumb)) {
-        const newValue =
-          Math.abs(inputNumb) > 10
-            ? Math.abs(inputNumb) % 10
-            : Math.abs(inputNumb)
-
-        setFruitId(newValue)
+      if (inputNumb > fruitsQuantity || inputNumb === DEFAULT_ID) {
+        setIsMessageShown(true)
+      } else {
+        setIsMessageShown(false)
+        setFruitId(inputNumb)
       }
     } else {
+      setIsMessageShown(true)
       setFruitId(DEFAULT_ID)
     }
   }
