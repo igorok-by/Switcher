@@ -1,4 +1,4 @@
-const FRUITS = [
+export const FRUITS = [
   {
     id: 1,
     name: 'яблоко',
@@ -40,5 +40,3 @@ const FRUITS = [
     name: 'лимон',
   },
 ]
-
-export default FRUITS
