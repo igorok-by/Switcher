@@ -1,12 +1,28 @@
-// @import "../../styles/variables";
+@import "../../styles/variables";
 
 .app {
-  margin: rem(30) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 38.8rem;
+  height: 25.4rem;
+  padding: 4.4rem 3rem;
+
+  font-size: 3.6rem;
+
+  background-color: rgba($color: $default-color, $alpha: $low-opacity);
+  border-radius: $default-radius;
 }
 
-.app__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.app__title {
+  margin-bottom: 1.6rem;
+}
+
+.app__input {
+  width: 12.4rem;
+  height: 4.8rem;
+  margin-bottom: 2rem;
+
+  text-align: center;
 }
