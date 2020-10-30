@@ -1,0 +1,30 @@
+// Colors
+$dark-color: #000000;
+$default-color: #ffffff;
+$primary-color: #79c578;
+;
+
+// Font
+$mainFont: "Roboto", Helvetica, Arial, sans-serif;
+
+// Size
+$mainFontColor: $dark-color;
+$mainFontSize: 10px;
+$mainFontWeight: 400;
+$mainLineHeight: 1;
+
+// Opacity
+$low-opacity: 0.42;
+
+// Borders
+$default-radius: 8px;
+
+// Transition
+$def-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+$long-transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+// Breakpoints
+$screen-phone: 480px;
+$screen-sm-tablet: 768px;
+$screen-tablet: 992px;
+$screen-desktop: 1200px;
